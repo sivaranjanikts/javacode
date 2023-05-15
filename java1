@@ -1,0 +1,38 @@
+import java.util.Scanner; 
+class custamizedexception {
+	
+   void age(int age)throws Exception
+   {
+   if(age<18)
+   {
+	  throw new Exception("your age is not valid for vote") ;
+   }
+   else if(age>55)
+   {
+	   throw new Exception("your age is bard");
+   }
+   else {
+	   System.out.println("your are eligible");
+   }
+   }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       custamizedexception ob=new  custamizedexception();
+       
+       
+       Scanner s= new Scanner(System.in);
+       System.out.println("Enter your age");
+       int age =s.nextInt();
+       try
+       {
+    	   ob.age(age);
+       }
+       catch (Exception e)
+       {
+    	   System.out.println(e);
+       }
+       
+       
+       
+	}
